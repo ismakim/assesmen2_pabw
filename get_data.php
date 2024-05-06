@@ -1,9 +1,9 @@
 <?php
 // Koneksi ke database
 $servername = "localhost";
-$username = "username";
-$password = "password";
-$dbname = "nama_database";
+$username = "root";
+$password = "";
+$dbname = "assesment_dua_pabw";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
@@ -11,7 +11,7 @@ if ($conn->connect_error) {
 }
 
 // Query untuk mengambil data dari tabel
-$sql = "SELECT * FROM tabel_penyakit_tidak_menular";
+$sql = "SELECT * FROM pasien";
 $result = $conn->query($sql);
 
 // Format data menjadi JSON
